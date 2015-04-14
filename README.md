@@ -1,1 +1,0 @@
-# nhicksdesign.github.io
