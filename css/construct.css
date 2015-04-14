@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Nate Hicks - Graphic Designer</title>
-
-            <!-- My CSS -->
-    <link href="css/construct.css" rel="stylesheet">
-
-  </head>
-  <body>
-  </body>
- </html>
+body {
+	width: 100%;
+	background-image: url("../images/ConstructionPage.png");
+}
