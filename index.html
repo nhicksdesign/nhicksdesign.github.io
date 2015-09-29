@@ -38,10 +38,29 @@
 	<!-- page header -->
 				<header>
 					<div class="centered nav-wrapper">
-						<div class="menu-bar section-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <!-- 
+                if you use .col-xs-12 it will work all the way up to .col-lg-12 
+                automatically. you don't need to declare every class 
+
+                the only time you need to use more than one of these classes is
+                if you are changing the number of columns for different screen
+                sizes
+            -->
+						<div class="menu-bar section-wrapper col-xs-12">
 						<h1><a href="#/home" title="Nate Hicks - Graphic Designer"><img src="images/logo.png" alt="Nate Hicks - Graphic Designer" /></a></h1>
 	<!-- main page menu -->
 						<nav>
+              <!-- 
+                  generally people write navs in <ul>s because it is a list of links
+                  not 100% necessary but it is how I do it 10/10 times
+
+                  its generally frowned upon to write out stuff in all caps in HTML.
+                  instead you could do something like this in CSS:
+
+                  .nav-wrapper nav a {
+                    text-transform: uppercase;
+                  } 
+              -->
 							<a href="#section-0" title="Home">HOME</a>
 
 							<a href="#section-1" title="About">ABOUT</a>
@@ -50,7 +69,14 @@
 
 							<a href="#section-3" title="Contact">CONTACT</a>
 
-							<a href="http://www.linkedin.com/pub/nate-hicks/22/964/a31">
+              <-- 
+                  if you are sending people away from your site, it is always recommended
+                  to put target="_blank" on the anchor tag. this will open in a new 
+                  window/tab. this way the viewer still has your site open and doesnt get lost.
+
+                  i would put target blank on all these social links
+              -->
+							<a href="http://www.linkedin.com/pub/nate-hicks/22/964/a31" target="_blank">
 								<div title="Code: 0xe820" class="the-icons span3"><i class="icon-linkedin_alt"></i> <span class="i-name"></span><span class="i-code"></span>
 								</div>
 							</a>
@@ -73,6 +99,10 @@
 
 						</nav>                                              
 
+            <!-- 
+                <br> tags are old school, you should make an attempt to stop using them.
+                use margins and padding in CSS instead
+            -->
 						<br class="cb">
 						</div>
 					</div>
@@ -81,20 +111,36 @@
 
 	<!-- HOME PAGE -->
 
-				<div class="section-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12" id="section-0" title="Home">
-					<div class="section" id="home col-lg-4 col-md-4 col-sm-4 col-xs-4">
-						<h1>Descend with me<br><b>into the depths</b>.</h1>
+        <!-- 
+            i dont think ive ever seen title="" tags on <div>s
+        -->
+				<div class="section-wrapper col-xs-12" id="section-0" title="Home">
+					<div class="section" id="home col-xs-4">
+            <!--
+                <b> tags are also old school
+                <strong></strong> is the new hotness for bold
+                <em></em> (emphasis) is the new hotness for italics
+            -->
+						<h1>Descend with me<br><strong>into the depths</strong>.</h1>
 					</div>
 				</div>
 
     <!-- ABOUT PAGE -->
-				<div class="section-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12" id="section-1" title="About">
-					<div class="section" id="about col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<div class="section-wrapper col-xs-12" id="section-1" title="About">
+					<div class="section" id="about col-xs-4">
 						<div class="me">
 						  <img src="images/MeHalftone.png">
 						</div>
 
 						<h1><b>nate</b> (nayt):</h1>
+            <!-- 
+                chill on the br tags bud 
+                in this specific case, you should do something like this with CSS:
+
+                #about h1 {
+                  margin-bottom: 50px; 
+                }
+            -->
 						<br>
 						<br>
 						<br>
@@ -109,21 +155,25 @@
 					</div>
 				</div>
 	<!-- WORK PAGE -->
-				<div class="section-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12" id="section-2" title="Work">
-					<div class="section" id="work col-lg-10 col-md-10 col-sm-10 col-xs-10">
+				<div class="section-wrapper col-xs-12" id="section-2" title="Work">
+					<div class="section" id="work col-xs-10">
 					</div>
 				</div>
 	<!-- CONTACT PAGE -->
 				<div class="section-wrapper" id="section-3" title="Contact">
-					<div class="section" id="contact col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                        <div class="split">
-                            <img src="images/FaceWeb.png">
-                        </div>
+					<div class="section" id="contact col-xs-4">
+            <!--
+                for your own sanity you should try to keep your whitespace uniform
+                it just makes the code much more readable
+            -->
+            <div class="split">
+                <img src="images/FaceWeb.png">
+            </div>
 						<h1>Feel free to contact me anytime<br>
-                            via <a title="Drop Me a Line!" href="mailto:nhicksdesign@gmail.com">nhicksdesign@gmail.com</a>,<br>
-                            or through any of the social media<br>
-                            icons in the menu!
-                        </h1>
+                via <a title="Drop Me a Line!" href="mailto:nhicksdesign@gmail.com">nhicksdesign@gmail.com</a>,<br>
+                or through any of the social media<br>
+                icons in the menu!
+            </h1>
 					</div>
 				</div>
 
@@ -133,6 +183,12 @@
 	    <script src="js/bootstrap.min.js"></script>
 	    <script src="js/main.js"></script>
 	    <script src="jquery.nav.js"></script>
+    <!--
+        you should probably put this in your main.js
+        avoid putting scripts in the HTML
+
+        oh also main.js doesnt exist, script.js does?
+    -->
 		<script>
 			$(document).ready(function() {
 				$('#nav').onePageNav();
