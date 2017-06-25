@@ -29,7 +29,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="resources/img/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="resources/img/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="resources/img/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="resources/img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="resources/img/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="resources/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="resources/img/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="resources/img/favicon-16x16.png">
@@ -138,7 +138,8 @@
             <span class="typed"></span>
         </div>
     </header>
-
+    
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     <section id="about">
         <div class="row">
             <h2>Dress to impress.</h2>
@@ -183,6 +184,25 @@
         <div class="row">
             <h2>Make contact.</h2>
             <p>Feel free to reach out through the form below, or any of my social networks!</p>
+        </div>
+        <div class="form-container">
+            <form id="contact-form" action="mailto:nhicksdesign@gmail.com" method="post">
+                <fieldset>
+                    <input placeholder="Your name" type="text" tabindex="1" required>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Your Email" type="email" tabindex="2" required>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Your Website (optional)" type="url" tabindex="4">
+                </fieldset>
+                <fieldset>
+                    <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+                </fieldset>
+                <fieldset>
+                    <input type="submit" value="Send It">
+                </fieldset>
+            </form>
         </div>
     </section>
 </body>
