@@ -1,0 +1,216 @@
+/*MAIN*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #c0392b;
+    font-family: 'Rubik', 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+}
+
+header {
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.loader {
+    background-color: rgb(236, 240, 241);
+    height: 100%;
+    left: 0px;
+    position: fixed;
+    top: 0px;
+    z-index: 9999;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+
+.loader svg {
+    left: 50%;
+    text-align: center;
+    top: 50%;
+    transform: scale(.25), translate(-50%, -50%);
+    width: 1140px;
+}
+
+.row {
+    margin: 0 auto;
+    max-width: 1140px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+
+/* FONTS */
+
+h1 {
+    color: #fff;
+    font-family: 'Rubik', sans-serif;
+    font-size: 400%;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-bottom: 0px;
+    margin-top: 0;
+    word-spacing: 4px;
+}
+
+h2,
+.typed {
+    color: #2c3e50;
+    font-size: 250%;
+    font-family: 'Abril Fatface', cursive;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: lowercase;
+    word-spacing: 2px;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.long-copy {
+    line-height: 145%;
+    margin-left: 15%;
+    width: 70%;
+}
+
+p {
+    color: #2c3e50;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/* NAVIGATION */
+
+.icon-nav {
+    color: #fff;
+    vertical-align: middle;
+    display: block;
+    font-size: 120%;
+    transform: scale(1.0);
+    transition: color 0.5s, transform 0.5s;
+}
+
+.icon-nav:hover,
+.icon-nav:active {
+    color: #2c3e50;
+    transform: scale(1.2);
+    transition: color 0.5s, transform 0.5s;
+}
+
+.logo {
+    float: left;
+    height: 100px;
+    margin-top: 20px;
+    width: auto;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 30px;
+    letter-spacing: 2px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    color: #fff;
+    font-size: 90%;
+    padding: 4px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.5s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    color: #2c3e50;
+    font-weight: 900;
+    transition: color 0.5s;
+}
+
+
+/* HOME PAGE */
+
+.hero-text-box {
+    left: 50%;
+    line-height: 60px;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1140px;
+    z-index: -1;
+}
+
+
+/* ABOUT PAGE */
+
+#about {
+    background-color: #ecf0f1;
+    height: 100vh;
+}
+
+#about .long-copy {
+    margin-bottom: 30px;
+}
+
+.box {
+    padding: 1%;
+}
+
+.box h3 {
+    color: #c0392b;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 140%;
+    font-weight: 400;
+    text-transform: lowercase;
+}
+
+.box p {
+    font-size: 90%;
+    line-height: 130%;
+    text-align: left;
+}
+
+.icon-big {
+    color: #c0392b;
+    display: block;
+    font-size: 350%;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+/* WORK PAGE */
+
+#work {
+    background-color: #2c3e50;
+    height: 100vh;
+}
+
+#work h2,
+#work p {
+    color: #ecf0f1;
+}
