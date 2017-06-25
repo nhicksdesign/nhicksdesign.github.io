@@ -114,7 +114,7 @@
         }
 
     </style>
-    
+
     <!-- MY JS -->
     <script src="resources/js/script.js" type="text/javascript"></script>
 </head>
@@ -189,22 +189,15 @@
             <p>Feel free to reach out through the form below, or any of my social networks!</p>
         </div>
         <div class="form-container">
-            <form id="contact-form" action="mailTo:nhicksdesign@gmail.com" method="post">
-                <fieldset>
-                    <input placeholder="Your name" type="text" tabindex="1" required>
-                </fieldset>
-                <fieldset>
-                    <input placeholder="Your Email" type="email" tabindex="2" required>
-                </fieldset>
-                <fieldset>
-                    <input placeholder="Your Website (optional)" type="url" tabindex="4">
-                </fieldset>
-                <fieldset>
-                    <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
-                </fieldset>
-                <fieldset>
-                    <input type="submit" value="Send It">
-                </fieldset>
+            <form id="contact-form" action="//formspree.io/nhicksdesign@gmail.com" method="post">
+                <input type="text" name="Name" placeholder="Name" required>
+                <input type="email" name="Email" placeholder="Email" required>
+                <textarea name="Message" cols="30" rows="6" placeholder="Message" required></textarea>
+                <!-- CONFIG -->
+                <input type="hidden" name="_subject" value="Subject">
+                <input type="hidden" name="_cc" value="email@cc.com">
+                <!-- /CONFIG -->
+                <input class="submit" type="submit" value="Send">
             </form>
         </div>
     </section>
