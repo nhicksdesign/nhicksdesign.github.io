@@ -214,3 +214,16 @@ p {
 #work p {
     color: #ecf0f1;
 }
+
+
+/* CONTACT PAGE */
+
+#contact {
+    background-color: #c0392b;
+    height: 100vh;
+}
+
+#contact h2,
+#contact p {
+    color: #ecf0f1;
+}
