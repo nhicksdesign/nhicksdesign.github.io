@@ -14,7 +14,7 @@ $(document).ready(function () {
     /*SCROLL TO*/
     $('.home-button').click(function () {
         $('html, body').animate({
-            scrollTop: $('.hero-text-box').offset().top
+            scrollTop: $('header').offset().top
         }, 1000);
     });
 
