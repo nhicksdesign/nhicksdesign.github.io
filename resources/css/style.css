@@ -288,43 +288,180 @@ p {
 
 /* WORK PAGE */
 
-.work-showcase {
+.grid {
+    position: relative;
+    margin: 0 auto;
+    padding: 1em 0 4em;
+    max-width: 1920px;
     list-style: none;
-    margin-top: 80px;
+    text-align: center;
     width: 100%;
 }
 
-.work-showcase li {
-    display: block;
+/* Common style */
+
+.grid figure {
+    position: relative;
+    color: #2c3e50;
     float: left;
-    width: 25%;
-}
-
-.work-photo {
-    width: 100%;
-    margin: 0;
     overflow: hidden;
-    background-color: #000;
+    margin: 10px 1%;
+    min-width: 320px;
+    max-width: 22.8%;
+    max-height: 360px;
+    text-align: center;
+    cursor: pointer;
 }
 
-.work-photo img {
-    opacity: 0.5;
+.grid figure img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+    opacity: 0.8;
+}
+
+.grid figure figcaption {
+    padding: 0;
+    color: #2c3e50;
+    margin: auto;
+    text-transform: uppercase;
+    font-size: 100%;
     width: 100%;
-    height: auto;
-    -webkit-transform: scale(1.15);
-    -ms-transform: scale(1.15);
-    transform: scale(1.15);
-    -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
-    transition: transform 0.5s, opacity 0.5s;
+    position: absolute;
 }
 
-.work-photo img:hover {
+.grid figure figcaption img {
+    float: none;
+    margin: auto auto;
+    padding: 0;
     opacity: 1;
-    -webkit-transform: scale(1.03);
-    -ms-transform: scale(1.03);
-    transform: scale(1.03);
+    transform: scale(.5);
 }
 
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+    pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+
+/* For some effects it will show as a button */
+
+.grid figure h2,
+.grid figure h1 {
+    margin: auto auto;
+    color: #2c3e50;
+}
+
+.grid figure h1 {
+    color: #2c3e50;
+    letter-spacing: 1px;
+    font-size: 80%;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    top: 65%;
+}
+
+figure.thumbnail-effect img {
+    opacity: 0.3;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+
+figcaption img {
+    opacity: 1;
+}
+
+figure.thumbnail-effect:hover img {
+    opacity: 1;
+}
+
+figure.thumbnail-effect:hover figcaption img {
+    opacity: 0;
+}
+
+figure.thumbnail-effect figcaption::before,
+figure.thumbnail-effect figcaption::after {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    content: '';
+    opacity: 1;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.thumbnail-effect figcaption::before {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: scale(0, 1);
+    transform: scale(0, 1);
+}
+
+figure.thumbnail-effect figcaption::after {
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    -webkit-transform: scale(1, 0);
+    transform: scale(1, 0);
+}
+
+figure.thumbnail-effect h1 {
+    padding: 20px 2.5em;
+    opacity: 1;
+    color: white;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+    width: 100%;
+}
+
+figure.thumbnail-effect:hover figcaption::before,
+figure.thumbnail-effect:hover figcaption::after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+figure.thumbnail-effect:hover h2,
+figure.thumbnail-effect:hover h1 {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 40px, 0);
+}
+
+#thumbnail-text {
+    color: white;
+}
+
+.first {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 900;
+    text-transform: lowercase
+}
+
+.second {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.third {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
 
 #work {
     background-color: #2c3e50;
@@ -332,7 +469,7 @@ p {
 }
 
 #work h2,
-#work p {
+#work-description {
     color: #ecf0f1;
 }
 
