@@ -58,11 +58,8 @@ section {
 h1 {
     color: #fff;
     font-family: 'Rubik', sans-serif;
-    font-size: 400%;
     font-weight: 900;
     letter-spacing: 1px;
-    margin-bottom: 0px;
-    margin-top: 0;
     word-spacing: 4px;
 }
 
@@ -79,12 +76,6 @@ h2,
     word-spacing: 2px;
 }
 
-h3 {
-    font-size: 110%;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
 .intro-text {
     color: white;
     line-height: 1.5;
@@ -99,6 +90,7 @@ h3 {
 
 p {
     color: #2c3e50;
+    font-size: 18px;
     text-align: center;
     margin-top: 20px;
 }
@@ -110,22 +102,20 @@ p {
     color: #fff;
     vertical-align: middle;
     display: block;
-    font-size: 120%;
-    transform: scale(1.0);
-    transition: color 0.5s, transform 0.5s;
+    font-size: 150%;
+    transition: color 0.25s, transform 0.25s;
 }
 
 .icon-nav:hover,
 .icon-nav:active {
     color: #2c3e50;
-    transform: scale(1.2);
-    transition: color 0.5s, transform 0.5s;
+    transition: color 0.25s, transform 0.25s;
 }
 
 .logo {
     float: left;
     height: 100px;
-    margin-top: 20px;
+    margin-top: 40px;
     width: auto;
 }
 
@@ -139,12 +129,13 @@ p {
     display: inline-block;
     margin-left: 30px;
     letter-spacing: 2px;
+    font-family: 'Rubik', sans-serif;
 }
 
 .main-nav li a:link,
 .main-nav li a:visited {
     color: #fff;
-    font-size: 90%;
+    font-size: 120%;
     padding: 4px 0;
     text-decoration: none;
     text-transform: uppercase;
@@ -154,40 +145,44 @@ p {
 .main-nav li a:hover,
 .main-nav li a:active {
     color: #2c3e50;
-    font-weight: 900;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
     transition: color 0.5s;
+    transform-origin: center;
 }
+
 
 /*MOBILE NAVIGATION*/
 
 .mobile-nav-icon {
     cursor: pointer;
     display: none;
-    float: right;
-    margin-top: 30px;
+    float: left;
+    margin-top: 50px;
 }
 
 .mobile-nav-icon i {
     color: white;
-    font-size: 200%;
+    font-size: 400%;
 }
 
 
 /*STICKY NAVIGATION*/
 
 .sticky {
-    background-color: #c0392b;
+    background-color: rgba(192, 57, 43, 1) !important;
     left: 0;
     position: fixed;
     top: 0;
     width: 100%;
+    height: auto;
     z-index: 9000;
 }
 
 .sticky .logo {
     float: left;
     height: 50px;
-    margin: 5px 0;
+    margin: 20px 0;
     width: auto;
 }
 
@@ -203,12 +198,11 @@ p {
 .sticky .icon-nav:hover,
 .sticky .icon-nav:active {
     color: #2c3e50;
-    transform: scale(1.2);
     transition: color 0.5s, transform 0.5s;
 }
 
 .sticky .main-nav {
-    margin-top: 15px;
+    margin-top: 0px;
 }
 
 .sticky .main-nav li a:link,
@@ -225,7 +219,6 @@ p {
 .sticky .main-nav li a:hover,
 .sticky .main-nav li a:active {
     color: #2c3e50;
-    font-weight: 900;
     transition: color 0.5s;
 }
 
@@ -236,8 +229,31 @@ p {
 }
 
 
-
 /* HOME PAGE */
+
+/*----------------------- Preloader -----------------------*/
+body.preloader-site {
+    overflow: hidden;
+}
+
+.preloader-wrapper {
+    height: 100%;
+    width: 100%;
+    background: #FFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+}
+
+.preloader-wrapper .preloader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 120px;
+}
 
 .hero-text-box {
     left: 50%;
@@ -246,32 +262,42 @@ p {
     text-align: center;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 1140px;
+    width: 100%;
     z-index: -1;
 }
 
 
 /* ABOUT PAGE */
 
+.aboutMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #about {
     background-color: #ecf0f1;
     height: 100vh;
-}
-
-.skills {
-    margin-top: 80px;
 }
 
 .box {
     padding: 1%;
 }
 
-.box h3 {
+h3 {
     color: #c0392b;
     font-family: 'Abril Fatface', cursive;
     font-size: 160%;
     font-weight: 400;
     text-transform: lowercase;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.case-study h3 {
+    font-family: 'Rubik', sans-serif;
+    text-transform: none;
+    font-size: 140%;
 }
 
 .box p {
@@ -296,7 +322,6 @@ p {
     border-radius: 4px;
     color: #c0392b;
     cursor: pointer;
-    display: block;
     font-size: 18px;
     font-family: 'Rubik', sans-serif;
     letter-spacing: 1px;
@@ -325,7 +350,6 @@ p {
 }
 
 
-
 /* WORK PAGE */
 
 .grid {
@@ -337,6 +361,7 @@ p {
     text-align: center;
     width: 100%;
 }
+
 
 /* Common style */
 
@@ -391,7 +416,9 @@ p {
     height: 100%;
 }
 
+
 /* Anchor will cover the whole item by default */
+
 
 /* For some effects it will show as a button */
 
@@ -514,7 +541,7 @@ figure.thumbnail-effect:hover h1 {
 }
 
 #work h2,
-#work-description {
+#workSub {
     color: #ecf0f1;
 }
 
@@ -536,7 +563,7 @@ figure.thumbnail-effect:hover h1 {
 
 .form-container {
     margin: 0 auto;
-    max-width: 400px;
+    max-width: 600px;
     position: relative;
     width: 100%;
 }
@@ -588,7 +615,7 @@ fieldset {
     background: #FFF;
     border: 1px solid #ccc;
     margin: 0 0 5px;
-    padding: 10px;
+    padding: 10px 0px 0px 10px;
     width: 100%;
 }
 
