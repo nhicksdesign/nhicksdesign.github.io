@@ -68,6 +68,14 @@
                 autoAlpha: 0
             });*/
 
+            var mainLogo = $("#logo-container");
+            mainLogo.mouseover(function(){
+              TweenMax.to(mainLogo, 0.25, {y:-10, ease:Sine.easeInOut})
+            });
+            mainLogo.mouseout(function(){
+              TweenMax.to(mainLogo, 0.25, {y:0, ease:Sine.easeInOut})
+            });
+
             /*STICKY NAVIGATION + PAGE ANIMATIONS*/
             $("#about").waypoint(function(direction) {
                 if (direction == 'down') {
@@ -140,7 +148,7 @@
         <div class="section no-pad-bot" id="index-banner">
             <div class="container">
                <div class="row">
-                    <div class="hero-text-box case-study">
+                    <div class="hero-text-box case-study center-align">
                         <h1>personal identity</h1>
                         <h3 class="intro-text">After getting more and more exposure to the UI/UX and Web Design world, I decided it was time to overhaul my personal identity and clean up my portfolio site. I knew I wanted to build the site from scratch, as opposed to my previous site that I built on Bootstrap. I also knew that I wanted to make it more minimal and type focused than my last site with some subtle UI animation. With that in mind, I updated my logo as well.</h3>
                     </div>
@@ -151,13 +159,12 @@
     
     <section id="about">
         <div class="row first-image">
-            <img class="mockup" src="resources/img/case-study01-mocks.png" />
+            <img class="mockup responsive-img" src="resources/img/case-study01-mocks.png" />
         </div>
 
-        <div class="row first-description">
-            <div class="col span-1-of-3"></div>
+        <div class="row first-description center-text valign-wrapper">
             <div class="col span-1-of-3">
-                <p>I created a much more minimal version of my logo first. Then laid out a super clean type focused site. It needed to be lightweight to reduce the need of loaders and I didn't want it to be too over the top with jQuery effects.</p>
+                <p>I created a super minimal version of my logo intially. Using that as a jumping off point, I reworked my site from the ground up utilizing the latest techniques I had learned in JS and GSAP. This allowed for eased animations, smooth scrolling, and waypoints to trigger events. I plan to continue to update the site as I learn.</p>
             </div>
             <div class="col span-1-of-3"></div>
         </div>

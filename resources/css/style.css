@@ -26,7 +26,8 @@ html {
 }
 
 header {
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
 
     background-position: center;
     background-size: cover;
@@ -51,7 +52,7 @@ a {
 
 .row {
     max-width: 1140px;
-    margin: 0 auto;
+    margin: 0 auto !important;
 }
 
 section {
@@ -607,7 +608,7 @@ figure.thumbnail-effect:hover h1 {
     font-family: "Rubik", sans-serif;
     font-weight: 900;
 
-    text-transform: lowercase;
+    text-transform: none;
 }
 
 .second {
@@ -807,32 +808,14 @@ fieldset {
 }
 
 .case-study {
-    width: 40%;
+    width: 60%;
 }
 
-.case-study2 {
-    width: 100%;
-    height: 100vh;
-
-    background-color: #8e44ad;
-}
-
-.case-study3 {
-    width: 100%;
-    height: 100vh;
-
-    background-color: #f69182;
-}
-
-.case-study4 {
-    width: 100%;
-    height: 100vh;
-
-    background-color: #488ea4;
-}
-
-.first-image {
-    width: 100%;
+.case-study .row {
+    margin-top: 36px !important;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
 }
 
 .first-description {
@@ -840,78 +823,6 @@ fieldset {
     margin-top: 520px;
 }
 
-#mg-yoga {
-    width: 40%;
-}
-
-#mg-yoga h1 {
-    font-family: "Montserrat", sans-serif;
-}
-
-#upstate {
-    width: 40%;
-}
-
-#upstate h1 {
-    font-family: "Open Sans", sans-serif;
-    font-size: 300%;
-    font-weight: 700;
-
-    letter-spacing: 6px;
-    text-transform: uppercase;
-}
-
-#ivfcloud {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    z-index: 1;
-
-    width: 40%;
-
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-#ivfcloud h1 {
-    font-family: "Arial", sans-serif;
-    font-size: 300%;
-    font-weight: 700;
-}
-
-.purp {
-    background-color: #8e44ad;
-}
-
-#purp {
-    font-family: "Montserrat", sans-serif;
-
-    color: #8e44ad;
-}
-
-.pink {
-    background-color: #f69182;
-}
-
-#pink {
-    font-family: "Open Sans", sans-serif;
-
-    color: #f69182;
-}
-
-.blue {
-    background-color: #488ea4;
-}
-
-#blue {
-    font-family: "Arial", sans-serif;
-
-    color: #488ea4;
-}
-
 .mockup {
-    position: absolute;
-    top: 80%;
-
-    width: 60%;
+    margin-top: -240px;
 }
