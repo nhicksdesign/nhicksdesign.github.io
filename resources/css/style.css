@@ -106,6 +106,7 @@ h2,
 p {
     margin-top: 20px;
 
+    font-family: "Rubik";
     font-size: 18px;
 
     text-align: center;
@@ -649,12 +650,12 @@ figure.thumbnail-effect:hover h1 {
     height: auto;
     min-height: 100vh;
 
-    background-color: #c0392b;
+    background-color: #fdcb6e;
 }
 
 #contact h2,
 #contact p {
-    color: #ecf0f1;
+    color: #2c3e50;
 }
 
 
