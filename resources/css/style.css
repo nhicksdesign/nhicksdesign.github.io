@@ -325,7 +325,8 @@ body.preloader-site {
 }
 
 #about {
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
 
     background-color: #ecf0f1;
 }
@@ -629,7 +630,8 @@ figure.thumbnail-effect:hover h1 {
 }
 
 #work {
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
 
     background-color: #2c3e50;
 }
@@ -643,7 +645,8 @@ figure.thumbnail-effect:hover h1 {
 /* CONTACT PAGE */
 
 #contact {
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
 
     background-color: #c0392b;
 }
@@ -704,8 +707,6 @@ fieldset {
     min-width: 100%;
     padding: 0;
     margin: 0 0 10px;
-
-    border: medium none !important;
 }
 
 #contact-form input[type="text"],
@@ -713,12 +714,7 @@ fieldset {
 #contact-form input[type="tel"],
 #contact-form input[type="url"],
 #contact-form textarea {
-    width: 100%;
-    padding: 10px 0 0 10px;
-    margin: 0 0 5px;
-
-    border: 1px solid #ccc;
-    background: #fff;
+    padding: 10px 0;
 }
 
 #contact-form input[type="text"]:hover,
@@ -730,14 +726,18 @@ fieldset {
        -moz-transition: border-color .3s ease-in-out;
             transition: border-color .3s ease-in-out;
 
-    border: 1px solid #aaa;
+    border-bottom: 1px solid #c0392b;
 }
 
 #contact-form textarea {
-    height: 100px;
-    max-width: 100%;
+    padding-left: 0;
+    margin-bottom: 40px;
+    box-sizing: initial;
 
-    resize: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid #000;
+    border-left: none;
 }
 
 #contact-form input[type="submit"] {
@@ -771,8 +771,9 @@ fieldset {
 
 #contact-form input:focus,
 #contact-form textarea:focus {
-    border: 1px solid #aaa;
-    outline: 0;
+    border-bottom: 1px solid #c0392b;
+    outline: none;
+    box-shadow: none;
 }
 
 ::-webkit-input-placeholder {

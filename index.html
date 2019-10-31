@@ -128,6 +128,15 @@
             $('.modal').modal();
             /*ANIMATION SETS*/
             /*HOME PAGE*/
+
+            var mainLogo = $("#logo-container");
+            mainLogo.mouseover(function(){
+              TweenMax.to(mainLogo, 0.25, {y:-10, ease:Sine.easeInOut})
+            });
+            mainLogo.mouseout(function(){
+              TweenMax.to(mainLogo, 0.25, {y:0, ease:Sine.easeInOut})
+            });
+
             TweenMax.set(".navIntro", {
                 x: -10,
                 autoAlpha: 0
