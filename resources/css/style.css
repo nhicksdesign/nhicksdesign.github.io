@@ -330,6 +330,57 @@ body.preloader-site {
     text-align: center;
 }
 
+.typed-cursor {
+    -webkit-animation: blink .7s infinite;
+       -moz-animation: blink .7s infinite;
+            animation: blink .7s infinite;
+
+    opacity: 1;
+    color: "#2c3e50";
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 
 /* ABOUT PAGE */
 
