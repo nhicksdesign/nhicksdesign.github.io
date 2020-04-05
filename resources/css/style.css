@@ -37,6 +37,20 @@ a {
     text-decoration: none;
 }
 
+.button a {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    text-decoration: none;
+
+    color: inherit !important;
+}
+
+button:active {
+    background-color: none !important;
+}
+
 .clearfix {
     zoom: 1;
 }
@@ -392,27 +406,16 @@ h3 {
     letter-spacing: 1px;
     text-transform: uppercase;
 
-    color: #c0392b;
+    color: #c0392b !important;
     border: 3px solid #c0392b;
     border-radius: 4px;
     background: none;
 }
 
-#white {
-    color: white;
-    border: 3px solid white;
-}
-
-#white:hover {
-    color: #2c3e50;
-    background-color: white;
-}
-
 .button:hover {
-    color: #ecf0f1;
+    color: #ecf0f1 !important;
     background-color: #c0392b;
 }
-
 
 /* WORK PAGE */
 
@@ -601,34 +604,8 @@ figure.thumbnail-effect:hover h1 {
     opacity: 0;
 }
 
-#thumbnail-text {
+.thumbnail-text {
     color: white;
-}
-
-.first {
-    font-family: "Rubik", sans-serif;
-    font-weight: 900;
-
-    text-transform: none;
-}
-
-.second {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-
-    text-transform: none;
-}
-
-.third {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 400;
-}
-
-.fourth {
-    font-family: "Arial", sans-serif;
-    font-weight: 400;
-
-    text-transform: none;
 }
 
 #work {
