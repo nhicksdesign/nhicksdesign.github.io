@@ -76,6 +76,12 @@
               TweenMax.to(mainLogo, 0.25, {y:0, ease:Sine.easeInOut})
             });
 
+
+                        TweenMax.set([".skillBlock"], {
+                autoAlpha: 0,
+                y: 5
+            });
+
             /*STICKY NAVIGATION + PAGE ANIMATIONS*/
             $("#about").waypoint(function(direction) {
                 if (direction == 'down') {
@@ -85,8 +91,32 @@
                     $('nav').removeClass('sticky');
                     $('nav').addClass('transparent');
                 }
+                TweenMax.staggerTo(".skillBlock", 0.25, {
+                        autoAlpha: 1,
+                        y: 0,
+                        ease: Sine.easeInOut
+                    }, 0.25);
             }, {
                 offset: '310px;'
+            });
+
+
+            TweenMax.set(".navIntro", {
+                x: -10,
+                autoAlpha: 0
+            });
+            TweenMax.set(".hero-text-box", {
+                autoAlpha: 0
+            });
+
+            TweenMax.staggerTo(".navIntro", 0.1, {
+                x: 0,
+                autoAlpha: 1,
+                ease:Linear.easeInOut
+            }, 0.1);
+            TweenMax.to(".hero-text-box", 1, {
+                autoAlpha: 1,
+                delay: .5
             });
 
             /*SCROLL TO*/
@@ -150,7 +180,7 @@
                <div class="row">
                     <div class="hero-text-box case-study center-align">
                         <h1>personal identity</h1>
-                        <h3 class="intro-text">After getting more and more exposure to the UI/UX and Web Design world, I decided it was time to overhaul my personal identity and clean up my portfolio site. I knew I wanted to build the site from scratch, as opposed to my previous site that I built on Bootstrap. I also knew that I wanted to make it more minimal and type focused than my last site with some subtle UI animation. With that in mind, I updated my logo as well.</h3>
+                        <h3 class="intro-text">After getting more exposure to the UI/UX and Web Design world, I decided it was time to overhaul my personal identity and clean up my portfolio site. I knew I wanted to build the site from scratch, as opposed to my previous site that I built using a Bootstrap template. I also knew that I wanted to make it more minimal and type focused than my last site with some subtle UI animation. With that in mind, I incorporated Materialize and GSAP.</h3>
                     </div>
                 </div>
             </div>
@@ -162,12 +192,33 @@
             <img class="mockup responsive-img" src="resources/img/case-study01-mocks.png" />
         </div>
 
-        <div class="row first-description center-text valign-wrapper">
-            <div class="col span-1-of-3">
-                <p>I created a super minimal version of my logo intially. Using that as a jumping off point, I reworked my site from the ground up utilizing the latest techniques I had learned in JS and GSAP. This allowed for eased animations, smooth scrolling, and waypoints to trigger events. I plan to continue to update the site as I learn.</p>
-            </div>
-            <div class="col span-1-of-3"></div>
-        </div>
+        <div class="row skills">
+        			<h2 class="center skillBlock">skills used:</h2>
+                    <div class="col s12 m4 skillBlock">
+                        <div class="icon-block skill-icons">
+                            <h2 class="center icon-big"><i class="material-icons">mouse</i></h2>
+                            <h3 class="center">Graphic Design</h3>
+                            <p>After some sketching and ideation, I created a new logo and started laying out a cleaner typography focused design system.</p>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m4 skillBlock">
+                        <div class="icon-block skill-icons">
+                            <h2 class="center icon-big"><i class="material-icons">code</i></h2>
+                            <h3 class="center">Web Design</h3>
+                            <p>Using Google Materialize, I started laying out a clean and solid website to showcase my portfolio.</p>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m4 skillBlock">
+                        <div class="icon-block skill-icons">
+                            <h2 class="center icon-big"><i class="material-icons">phone_iphone</i></h2>
+                            <h3 class="center">UI Design</h3>
+                            <p>To align with the new direction, I chose a rich UI focused color pallette and leveraged my skills with GSAP to incorporate some subtle animation throughout the site.</p>
+                        </div>
+                    </div>
+
+                </div>
     </section>
 
     <footer class="page-footer blue-grey darken-4">
