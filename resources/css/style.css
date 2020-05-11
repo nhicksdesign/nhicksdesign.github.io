@@ -199,9 +199,8 @@ p {
 
 /*MOBILE NAVIGATION*/
 
-.mobile-nav-icon {
-    display: none;
-    float: left;
+nav .sidenav-trigger {
+    float: right !important;
     margin-top: 50px;
 
     cursor: pointer;
@@ -858,4 +857,57 @@ fieldset {
 
 .mockup {
     margin-top: -240px;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    nav .brand-logo {
+        position: inherit;
+        left: 10% !important;
+    }
+    .logo {
+        height: 60px;
+    }
+    nav .sidenav-trigger i {
+        font-size: 40px !important;
+    }
+    nav .sidenav-trigger {
+        margin-top: 35px !important;
+    }
+    .sticky .logo {
+        height: 40px;
+    }
+    .sticky .sidenav-trigger {
+        margin: 10px !important;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    nav .brand-logo {
+        position: inherit;
+        left: 5% !important;
+    }
+    nav .sidenav-trigger i {
+        font-size: 50px !important;
+    }
+    nav .sidenav-trigger {
+        margin: 50px !important;
+    }
+    .sticky .sidenav-trigger {
+        margin: 10px !important;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }
