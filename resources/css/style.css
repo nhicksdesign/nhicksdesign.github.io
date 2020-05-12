@@ -26,6 +26,8 @@ html {
 }
 
 header {
+    z-index: 999;
+
     height: auto;
     min-height: 100vh;
 
@@ -880,6 +882,21 @@ fieldset {
     }
     .sticky .sidenav-trigger {
         margin: 10px !important;
+    }
+    .case-study {
+        width: 80%;
+    }
+    .hero-text-box {
+        line-height: 48px;
+    }
+    h1 {
+        font-size: 300% !important;
+    }
+    h3 {
+        font-size: 100% !important;
+    }
+    h3.skill-title {
+        font-size: 150% !important;
     }
 }
 

@@ -5803,7 +5803,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       key: "_handleCloseTriggerClick",
       value: function _handleCloseTriggerClick(e) {
         var $closeTrigger = $(e.target).closest('.sidenav-close');
-        if ($closeTrigger.length && !this._isCurrentlyFixed()) {
+        if ($closeTrigger.length && !this._isCurrentlyFixed() || this._handleCloseTriggerClickBound) {
           this.close();
         }
       }
