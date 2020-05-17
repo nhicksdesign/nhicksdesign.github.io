@@ -5437,13 +5437,20 @@ $jscomp.polyfill = function (e, r, p, m) {
 ;(function ($, anim) {
   'use strict';
 
+  function menuOpen() {
+    var closeIcon = $('#closeIcon');
+
+    TweenMax.to(hamburgerIcon, 0.5, {autoAlpha:0, ease:Sine.easeInOut})
+    TweenMax.to(closeIcon, 0.5, {autoAlpha:1, ease:Sine.easeInOut})
+  };
+
   var _defaults = {
     edge: 'left',
     draggable: true,
     inDuration: 250,
     outDuration: 200,
     onOpenStart: null,
-    onOpenEnd: null,
+    onOpenEnd: menuOpen,
     onCloseStart: null,
     onCloseEnd: null,
     preventScrolling: true
@@ -5497,7 +5504,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       _this30.isFixed = _this30.el.classList.contains('sidenav-fixed');
 
       /**
-       * Describes if Sidenav is being draggeed
+       * Describes if Sidenav is being dragged
        * @type {Boolean}
        */
       _this30.isDragged = false;
@@ -5805,6 +5812,8 @@ $jscomp.polyfill = function (e, r, p, m) {
         var $closeTrigger = $(e.target).closest('.sidenav-close');
         if ($closeTrigger.length && !this._isCurrentlyFixed() || this._handleCloseTriggerClickBound) {
           this.close();
+          TweenMax.to(closeIcon, 0.5, {autoAlpha:0, ease:Sine.easeInOut})
+          TweenMax.to(hamburgerIcon, 0.5, {autoAlpha:1, ease:Sine.easeInOut})
         }
       }
 

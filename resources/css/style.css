@@ -201,7 +201,8 @@ p {
 
 /*MOBILE NAVIGATION*/
 
-nav .sidenav-trigger {
+nav .sidenav-trigger,
+nav .sidenav-close {
     float: right !important;
     margin-top: 50px;
 
@@ -511,7 +512,7 @@ h3 {
 
     display: block;
     max-width: 100%;
-    min-height: 100%;
+    min-height: 90%;
 
     opacity: .8;
 }
@@ -871,16 +872,19 @@ fieldset {
     .logo {
         height: 60px;
     }
-    nav .sidenav-trigger i {
+    nav .sidenav-trigger i,
+    nav .sidenav-close i {
         font-size: 40px !important;
     }
-    nav .sidenav-trigger {
+    nav .sidenav-trigger,
+    nav .sidenav-close {
         margin-top: 35px !important;
     }
     .sticky .logo {
         height: 40px;
     }
-    .sticky .sidenav-trigger {
+    .sticky .sidenav-trigger,
+    .sticky .sidenav-close {
         margin: 10px !important;
     }
     .case-study {
@@ -899,6 +903,10 @@ fieldset {
     h3.skill-title {
         font-size: 150% !important;
     }
+    nav i.material-icons {
+        position: absolute !important;
+        right: 1% !important;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -907,13 +915,16 @@ fieldset {
         position: inherit;
         left: 5% !important;
     }
-    nav .sidenav-trigger i {
-        font-size: 50px !important;
+    nav .sidenav-trigger i,
+    nav .sidenav-close i {
+        font-size: 40px !important;
     }
-    nav .sidenav-trigger {
-        margin: 50px !important;
+    nav .sidenav-trigger,
+    nav .sidenav-close {
+        margin-top: 35px !important;
     }
-    .sticky .sidenav-trigger {
+    .sticky .sidenav-trigger,
+    .sticky .sidenav-close {
         margin: 10px !important;
     }
 }
@@ -928,4 +939,38 @@ fieldset {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+    h1 {
+        font-size: 550% !important;
+    }
+    h1.thumbnail-text {
+        font-size: 100% !important;
+    }
+    .typed {
+        font-size: 300% !important;
+    }
+    #aboutHead,
+    #workHead,
+    #contactHead {
+        font-size: 400% !important;
+    }
+    .icon-big {
+        font-size: 550% !important;
+    }
+    .skill-title {
+        font-size: 225% !important;
+    }
+    .section {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    .row .col.m3 {
+        width: 50% !important;
+        padding: 50px !important;
+    }
+    .grid {
+        padding: 11em 0 0 !important;
+    }
+    .form-container {
+        max-width: 750px !important;
+    }
 }

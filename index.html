@@ -87,6 +87,9 @@
                 x: -10,
                 autoAlpha: 0
             });
+
+            TweenMax.set(closeIcon,{autoAlpha:0})
+
             TweenMax.set(".hero-text-box", {
                 autoAlpha: 0
             });
@@ -294,8 +297,12 @@
                     <li><a href="#about" class="about-button">ABOUT</a></li>
                     <li><a href="#work" class="work-button">WORK</a></li>
                     <li><a href="#contact" class="hire-button">HIRE ME</a></li>
+                    <li><a href="#!"class="sidenav-close"><i class="material-icons" id="closeIcon">close</i></a>
                 </ul>
-                <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+                <a href="javascript:;" data-target="nav-mobile" class="sidenav-trigger">
+                    <i class="material-icons" id="hamburgerIcon">menu</i>
+                </a>
 
                 <a id="logo-container" href="#home" class="brand-logo">
                     <img src="resources/img/Logo_Website%20Header.png" alt="Header Logo" class="logo">
@@ -379,83 +386,87 @@
     </section>
 
     <section id="work">
-        <div class="row">
-            <h2 id="workHead">Create a scene.</h2>
-            <p id="workSub">Here is some of the work I've done. Feel free to share any pieces that catch your eye!</p>
-        </div>
-        <div class="grid col span-2-of-2">
-            <a href="case-study-01.html" class="work-buttons">
-                <figure class="thumbnail-effect">
-                    <img src="resources/img/SiteSample1.jpg" alt="Personal Identity" />
-                    <figcaption>
-                        <img src="resources/img/gallery-logo1.png" alt="Personal Identity"/>
-                        <h1 class="first thumbnail-text">Personal Identity</h1>
-                    </figcaption>
-                </figure>
-            </a>
-            <a href="case-study-02.html" class="work-buttons">
-                <figure class="thumbnail-effect">
-                    <img src="resources/img/SiteSample2.jpg" alt="Dealer.com" />
-                    <figcaption>
-                        <img src="resources/img/gallery-logo2.png" alt="Dealer.com Work"/>
-                        <h1 class="second thumbnail-text">Dealer.com</h1>
-                    </figcaption>
-                </figure>
-            </a>
-            <a href="case-study-03.html" class="work-buttons">
-                <figure class="thumbnail-effect">
-                    <img src="resources/img/SiteSample3.jpg" alt="Tincture Design" />
-                    <figcaption>
-                        <img src="resources/img/gallery-logo3.png" alt="Tincture Design"/>
-                        <h1 class="third thumbnail-text">Tincture Design</h1>
-                    </figcaption>
-                </figure>
-            </a>
-            <a href="#" class="work-buttons">
-                <figure class="thumbnail-effect">
-                    <img src="resources/img/SiteSample1.jpg" alt="Upstate Elevator" />
-                    <figcaption>
-                        <img src="resources/img/gallery-logo1.png" alt="Upstate Elevator"/>
-                        <h1 class="fourth thumbnail-text">Upstate Elevator</h1>
-                    </figcaption>
-                </figure>
-            </a>
-            <a href="#" class="work-buttons">
-                <figure class="thumbnail-effect">
-                    <img src="resources/img/SiteSample1.jpg" alt="Logo Work" />
-                    <figcaption>
-                        <img src="resources/img/gallery-logo1.png" alt="Logo Work"/>
-                        <h1 class="fifth thumbnail-text">Logo Work</h1>
-                    </figcaption>
-                </figure>
-            </a>
-            <a href="#" class="work-buttons">
-                <figure class="thumbnail-effect">
-                    <img src="resources/img/SiteSample1.jpg" alt="UI Design" />
-                    <figcaption>
-                        <img src="resources/img/gallery-logo1.png" alt="UI Design"/>
-                        <h1 class="sixth thumbnail-text">UI Design</h1>
-                    </figcaption>
-                </figure>
-            </a>
-            <a href="#" class="work-buttons">
-                <figure class="thumbnail-effect">
-                    <img src="resources/img/SiteSample1.jpg" alt="Graphic Design" />
-                    <figcaption>
-                        <img src="resources/img/gallery-logo1.png" alt="Graphic Design"/>
-                        <h1 class="seventh thumbnail-text">Graphic Design</h1>
-                    </figcaption>
-                </figure>
-            </a>
-            <a href="#" class="work-buttons">
-                <figure class="thumbnail-effect">
-                    <img src="resources/img/SiteSample1.jpg" alt="Web Design" />
-                    <figcaption>
-                        <img src="resources/img/gallery-logo1.png" alt="Web Design"/>
-                        <h1 class="eighth thumbnail-text">Web Design</h1>
-                    </figcaption>
-                </figure>
-            </a>
+        <div class="container">
+            <div class="section">
+                <div class="row">
+                    <h2 id="workHead">Create a scene.</h2>
+                    <p id="workSub">Here is some of the work I've done. Feel free to share any pieces that catch your eye!</p>
+                </div>
+
+                <div class="grid col span-2-of-2">
+                    <a href="case-study-01.html" class="work-buttons s12 m6 l3">
+                        <figure class="thumbnail-effect">
+                            <img src="resources/img/SiteSample1.jpg" alt="Personal Identity" />
+                            <figcaption>
+                                <img src="resources/img/gallery-logo1.png" alt="Personal Identity"/>
+                                <h1 class="first thumbnail-text">Personal Identity</h1>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a href="case-study-02.html" class="work-buttons s12 m6 l3">
+                        <figure class="thumbnail-effect">
+                            <img src="resources/img/SiteSample2.jpg" alt="Dealer.com" />
+                            <figcaption>
+                                <img src="resources/img/gallery-logo2.png" alt="Dealer.com Work"/>
+                                <h1 class="second thumbnail-text">Dealer.com</h1>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a href="case-study-03.html" class="work-buttons s12 m6 l3">
+                        <figure class="thumbnail-effect">
+                            <img src="resources/img/SiteSample3.jpg" alt="Tincture Design" />
+                            <figcaption>
+                                <img src="resources/img/gallery-logo3.png" alt="Tincture Design"/>
+                                <h1 class="third thumbnail-text">Tincture Design</h1>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a href="#" class="work-buttons s12 m6 l3">
+                        <figure class="thumbnail-effect">
+                            <img src="resources/img/SiteSample1.jpg" alt="Upstate Elevator" />
+                            <figcaption>
+                                <img src="resources/img/gallery-logo1.png" alt="Upstate Elevator"/>
+                                <h1 class="fourth thumbnail-text">Upstate Elevator</h1>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a href="#" class="work-buttons s12 m6 l3">
+                        <figure class="thumbnail-effect">
+                            <img src="resources/img/SiteSample1.jpg" alt="Logo Work" />
+                            <figcaption>
+                                <img src="resources/img/gallery-logo1.png" alt="Logo Work"/>
+                                <h1 class="fifth thumbnail-text">Logo Work</h1>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a href="#" class="work-buttons s12 m6 l3">
+                        <figure class="thumbnail-effect">
+                            <img src="resources/img/SiteSample1.jpg" alt="UI Design" />
+                            <figcaption>
+                                <img src="resources/img/gallery-logo1.png" alt="UI Design"/>
+                                <h1 class="sixth thumbnail-text">UI Design</h1>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a href="#" class="work-buttons s12 m6 l3">
+                        <figure class="thumbnail-effect">
+                            <img src="resources/img/SiteSample1.jpg" alt="Graphic Design" />
+                            <figcaption>
+                                <img src="resources/img/gallery-logo1.png" alt="Graphic Design"/>
+                                <h1 class="seventh thumbnail-text">Graphic Design</h1>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a href="#" class="work-buttons s12 m6 l3">
+                        <figure class="thumbnail-effect">
+                            <img src="resources/img/SiteSample1.jpg" alt="Web Design" />
+                            <figcaption>
+                                <img src="resources/img/gallery-logo1.png" alt="Web Design"/>
+                                <h1 class="eighth thumbnail-text">Web Design</h1>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
         </div>
     </section>
 
