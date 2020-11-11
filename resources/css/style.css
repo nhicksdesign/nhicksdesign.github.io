@@ -489,20 +489,8 @@ h3 {
     color: #ecf0f1;
 }
 
-.color-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: auto;
-    height: auto;
-
-    opacity: 0;
-    background-color: black;
-}
-
-.color-overlay:hover {
-    opacity: .5;
+.work-buttons:hover {
+    opacity: .8;
 }
 
 /* CONTACT PAGE */
