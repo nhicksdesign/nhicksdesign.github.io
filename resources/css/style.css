@@ -489,6 +489,25 @@ h3 {
     color: #ecf0f1;
 }
 
+.work-buttons:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    content: "\A";
+    -webkit-transition: all .5s;
+            transition: all .5s;
+
+    opacity: 0;
+    background: rgba(0,0,0,.6);
+}
+
+.work-buttons:hover:after {
+    opacity: 1;
+}
 
 /* CONTACT PAGE */
 
