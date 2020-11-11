@@ -64,16 +64,25 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
         <script>
         $(document).ready(function() {
-            $('.tooltipped').tooltip();
+        $('.tooltipped').tooltip();
         /*ANIMATION SETS*/
         /*HOME PAGE*/
         var mainLogo = $("#logo-container");
+        if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        mainLogo.mouseover(function(){
+        TweenMax.to(mainLogo, 0, {y:0})
+        });
+        mainLogo.mouseout(function(){
+        TweenMax.to(mainLogo, 0, {y:0})
+        });
+        } else {
         mainLogo.mouseover(function(){
         TweenMax.to(mainLogo, 0.25, {y:-10, ease:Sine.easeInOut})
         });
         mainLogo.mouseout(function(){
         TweenMax.to(mainLogo, 0.25, {y:0, ease:Sine.easeInOut})
         });
+        };
         TweenMax.set(".navIntro", {
         x: -10,
         autoAlpha: 0
