@@ -66,6 +66,11 @@ button:active {
     content: ".";
 }
 
+.container {
+    width: 100% !important;
+    padding: 0 15px 0 15px !important;
+}
+
 .row {
     max-width: 1140px;
     margin: 0 auto;
@@ -290,34 +295,6 @@ nav .sidenav-close {
 
 /* HOME PAGE */
 
-/*----------------------- Preloader -----------------------*/
-body.preloader-site {
-    overflow: hidden;
-}
-
-.preloader-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999999;
-
-    width: 100%;
-    height: 100%;
-
-    background: #fff;
-}
-
-.preloader-wrapper .preloader {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    width: 120px;
-
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-}
-
 .hero-text-box {
     position: fixed;
     top: 50%;
@@ -489,24 +466,6 @@ h3 {
     color: #ecf0f1;
 }
 
-.button-text {
-    position: absolute;
-    top: 40%;
-    left: 0;
-    z-index: 1;
-
-    width: 100%;
-    height: 100%;
-
-    font-family: "Rubik";
-    font-size: 30px;
-    font-weight: 900;
-
-    text-align: center;
-
-    opacity: 0;
-    color: white;
-}
 
 /* CONTACT PAGE */
 
@@ -673,7 +632,7 @@ fieldset {
 }
 
 .case-study {
-    width: 60%;
+    width: 50%;
 }
 
 .case-study .row {
@@ -798,7 +757,7 @@ fieldset {
         padding: 50px !important;
     }
     .grid {
-        padding: 11em 0 0 !important;
+        padding: 6em 0 0 !important;
     }
     .form-container {
         max-width: 750px !important;
