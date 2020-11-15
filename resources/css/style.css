@@ -81,6 +81,7 @@ section {
 }
 
 
+
 /* FONTS */
 
 h1 {
@@ -107,6 +108,12 @@ h2,
     text-transform: lowercase;
 
     color: #2c3e50;
+}
+
+.typed-cursor {
+    font-family: "Abril Fatface", cursive;
+    font-size: 250%;
+    font-weight: 400;
 }
 
 .intro-text {
