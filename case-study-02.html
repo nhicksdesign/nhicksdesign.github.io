@@ -61,6 +61,40 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script>
         $(document).ready(function() {
+            var getGif = function() {
+              var gif = [];
+              $('.gif').each(function() {
+                var data = $(this).data('alt');
+                gif.push(data);
+              });
+              return gif;
+            }
+            var gif = getGif();
+            var image = [];
+ 
+            $.each(gif, function(index) {
+              image[index]     = new Image();
+              image[index].src = gif[index];
+            });
+            $('figure').on('click', function() {
+ 
+              var $this   = $(this),
+                      $index  = $this.index(),
+                       
+                      $img    = $this.children('img'),
+                      $imgSrc = $img.attr('src'),
+                      $imgAlt = $img.attr('data-alt'),
+                      $imgExt = $imgAlt.split('.');
+                       
+              if($imgExt[1] === 'gif') {
+                  $img.attr('src', $img.data('alt')).attr('data-alt', $imgSrc);
+              } else {
+                  $img.attr('src', $imgAlt).attr('data-alt', $img.data('alt'));
+              }
+
+              $this.toggleClass("play");
+             
+            });
             /*ANIMATION SETS*/
             /*HOME PAGE*/
             /*TweenMax.set(".navIntro", {
@@ -171,7 +205,7 @@
         </nav>
     </header>
     
-            <div class="section no-pad-bot" id="index-banner">
+        <div class="section no-pad-bot" id="index-banner">
             <div class="container">
                <div class="row">
                     <div class="hero-text-box case-study center-align">
@@ -183,43 +217,56 @@
         </div>
 
     <section id="about">
-        <div class="row first-image">
-            <div class="carousel">
-                <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/250/250/nature/1"></a>
-                <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/250/250/nature/2"></a>
-                <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/250/250/nature/3"></a>
-                <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/250/250/nature/4"></a>
-                <a class="carousel-item" href="#five!"><img src="https://lorempixel.com/250/250/nature/5"></a>
-          </div>
+        <div class="container">
+            <div class="row grid mockup">
+                <figure class="col s12 m6 l4 center-align">
+                  <img src="resources/img/case-02/dodge-ad.png" alt="Dodge Ad" data-alt="resources/img/case-02/dodge-ad.gif" class="responsive-img gif">
+                </figure>
+                <figure class="col s12 m6 l4 center-align">
+                  <img src="resources/img/case-02/hyundai-ad.png" alt="Hyundai Ad" data-alt="resources/img/case-02/hyundai-ad.gif" class="responsive-img gif">
+                </figure>
+                <figure class="col s12 m6 l4 center-align">
+                  <img src="resources/img/case-02/tire-ad.png" alt="Tire Ad" data-alt="resources/img/case-02/tire-ad.gif" class="responsive-img gif">
+                </figure>
+                <figure class="col s12 m6 l4 center-align">
+                  <img src="resources/img/case-02/jeep-ad.png" alt="Jeep Ad" data-alt="resources/img/case-02/jeep-ad.gif" class="responsive-img gif">
+                </figure>
+                <figure class="col s12 m6 l4 center-align">
+                  <img src="resources/img/case-02/chevy-ad.png" alt="Chevy Ad" data-alt="resources/img/case-02/chevy-ad.gif" class="responsive-img gif">
+                </figure>
+                <figure class="col s12 m6 l4 center-align">
+                  <img src="resources/img/case-02/fiat-ad.png" alt="Fiat Ad" data-alt="resources/img/case-02/fiat-ad.gif" class="responsive-img gif">
+                </figure>
+            </div>
+
+            <div class="row skills">
+            		<h2 class="center skillBlock">skills used:</h2>
+                        <div class="col s12 m4 skillBlock">
+                            <div class="icon-block skill-icons">
+                                <h2 class="center icon-big"><i class="material-icons">mouse</i></h2>
+                                <h3 class="center skill-title">Graphic Design</h3>
+                                <p>Layout and design come into play quite a lot with our ads and landing pages. Typography, color theory, and eye-catching visuals all come into play.</p>
+                            </div>
+                        </div>
+
+                        <div class="col s12 m4 skillBlock">
+                            <div class="icon-block skill-icons">
+                                <h2 class="center icon-big"><i class="material-icons">code</i></h2>
+                                <h3 class="center skill-title">Web Design</h3>
+                                <p>All of our ads are heavily JS focused and then our landing pages are equal parts HTML, CSS, and JS. All ads are customizable and many landing pages need to be as well.</p>
+                            </div>
+                        </div>
+
+                        <div class="col s12 m4 skillBlock">
+                            <div class="icon-block skill-icons">
+                                <h2 class="center icon-big"><i class="material-icons">phone_iphone</i></h2>
+                                <h3 class="center skill-title">UI Design</h3>
+                                <p>A lot of thought goes into the animations, button effects, and overall interaction with our ads. Some ads can even allow you to scroll through new inventory. This interactive aspect really allows for creativity, along with user engagement and interaction.</p>
+                            </div>
+                        </div>
+
+            </div>
         </div>
-
-        <div class="row skills">
-        			<h2 class="center skillBlock">skills used:</h2>
-                    <div class="col s12 m4 skillBlock">
-                        <div class="icon-block skill-icons">
-                            <h2 class="center icon-big"><i class="material-icons">mouse</i></h2>
-                            <h3 class="center skill-title">Graphic Design</h3>
-                            <p>Layout and design come into play quite a lot with our ads and landing pages. Typography, color theory, and eye-catching visuals all come into play.</p>
-                        </div>
-                    </div>
-
-                    <div class="col s12 m4 skillBlock">
-                        <div class="icon-block skill-icons">
-                            <h2 class="center icon-big"><i class="material-icons">code</i></h2>
-                            <h3 class="center skill-title">Web Design</h3>
-                            <p>All of our ads are heavily JS focused and then our landing pages are equal parts HTML, CSS, and JS. All ads are customizable and many landing pages need to be as well.</p>
-                        </div>
-                    </div>
-
-                    <div class="col s12 m4 skillBlock">
-                        <div class="icon-block skill-icons">
-                            <h2 class="center icon-big"><i class="material-icons">phone_iphone</i></h2>
-                            <h3 class="center skill-title">UI Design</h3>
-                            <p>A lot of thought goes into the animations, button effects, and overall interaction with our ads. Some ads can even allow you to scroll through new inventory. This interactive aspect really allows for creativity, along with user engagement and interaction.</p>
-                        </div>
-                    </div>
-
-                </div>
     </section>
 
     <footer class="page-footer blue-grey darken-4">
