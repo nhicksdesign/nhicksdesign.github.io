@@ -629,6 +629,30 @@ fieldset {
 
 /* CASE STUDIES */
 
+.write-up {
+    margin-top: 150px !important;
+    margin-bottom: 150px !important;
+}
+
+.write-up .description {
+    margin-top: 40%;
+}
+
+.write-up .description h4 {
+    font-size: 24px;
+
+    letter-spacing: 2px;
+}
+
+.write-up .description h4,
+.write-up .description p {
+    font-family: "Rubik", "Arial", sans-serif;
+
+    text-align: left !important;
+
+    color: #2c3e50 !important;
+}
+
 .case1,
 .case1 .sticky {
     background-color: #c0392b !important;
@@ -799,6 +823,19 @@ fieldset {
     nav i.material-icons {
         position: absolute !important;
         right: 1% !important;
+    }
+    .write-up {
+        margin-top: 150px !important;
+        margin-bottom: 150px !important;
+    }
+
+    .write-up .description {
+        margin-top: 50px;
+    }
+
+    .write-up .description h4,
+    .write-up .description p {
+        text-align: center !important;
     }
 }
 
