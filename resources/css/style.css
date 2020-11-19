@@ -475,6 +475,9 @@ h3 {
     color: #ecf0f1;
 }
 
+.work-buttons {
+    position: relative;
+}
 
 /* CONTACT PAGE */
 
@@ -634,8 +637,25 @@ fieldset {
     margin-bottom: 150px !important;
 }
 
+.case3 .write-up {
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+
 .write-up .description {
+    display: flex;
+    flex-direction: column;
+
+    align-content: middle;
+}
+
+.case1 .write-up .description {
+    padding: 30px !important;
     margin-top: 40%;
+}
+
+.case3 .write-up .description {
+    padding: 30px !important;
 }
 
 .write-up .description h4 {
