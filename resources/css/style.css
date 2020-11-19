@@ -654,7 +654,8 @@ fieldset {
     margin-top: 40%;
 }
 
-.case3 .write-up .description {
+.case3 .write-up .description,
+.case4 .write-up .description {
     padding: 30px !important;
 }
 
