@@ -72,6 +72,7 @@
         var isMobile = false;
         TweenMax.set(closeIcon, {autoAlpha:0})
         if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        isMobile = true;
         mainLogo.mouseover(function(){
         TweenMax.to(mainLogo, 0, {y:0})
         });
@@ -79,15 +80,13 @@
         TweenMax.to(mainLogo, 0, {y:0})
         });
         } else {
+        isMobile = false;
         mainLogo.mouseover(function(){
         TweenMax.to(mainLogo, 0.25, {y:-10, ease:Sine.easeInOut})
         });
         mainLogo.mouseout(function(){
         TweenMax.to(mainLogo, 0.25, {y:0, ease:Sine.easeInOut})
-        isMobile = true;
         });
-        };
-        if (isMobile = false) {
         TweenMax.set(".navIntro", {
         x: -10,
         autoAlpha: 0
@@ -214,7 +213,10 @@
         }, {
         offset: '140px;'
         });
-        } else {
+        };
+
+        
+
             $("#about").waypoint(function(direction) {
             if (direction == 'down') {
             $('nav').addClass('sticky');
@@ -226,7 +228,6 @@
             }, {
             offset: '140px;'
             });
-        };
         /*SCROLL TO*/
         $('#logo-container').click(function() {
         $('html, body').animate({
