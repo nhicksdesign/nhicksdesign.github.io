@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="case2">
+<html lang="en" class="case1">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -54,39 +54,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
         <script>
         $(document).ready(function() {
-        var getGif = function() {
-        var gif = [];
-        $('.gif').each(function() {
-        var data = $(this).data('alt');
-        gif.push(data);
-        });
-        return gif;
-        }
-        var gif = getGif();
-        var image = [];
-        
-        $.each(gif, function(index) {
-        image[index]     = new Image();
-        image[index].src = gif[index];
-        });
-        $('figure').on('click', function() {
-        
-        var $this   = $(this),
-        $index  = $this.index(),
-        
-        $img    = $this.children('img'),
-        $imgSrc = $img.attr('src'),
-        $imgAlt = $img.attr('data-alt'),
-        $imgExt = $imgAlt.split('.');
-        
-        if($imgExt[1] === 'gif') {
-        $img.attr('src', $img.data('alt')).attr('data-alt', $imgSrc);
-        } else {
-        $img.attr('src', $imgAlt).attr('data-alt', $img.data('alt'));
-        }
-        $this.toggleClass("play");
-        
-        });
         /*ANIMATION SETS*/
         /*HOME PAGE*/
         /*TweenMax.set(".navIntro", {
@@ -166,7 +133,7 @@
                     </a>
                     <ul class="right hide-on-med-and-down main-nav" id="mainNav">
                         <li><a href="case-study-01.html" class="navIntro">01</a></li>
-                        <li><a href="case-study-02.html" class="navIntro active">02</a></li>
+                        <li><a href="case-study-02.html" class="navIntro">02</a></li>
                         <li><a href="case-study-03.html" class="navIntro">03</a></li>
                         <li><a href="case-study-04.html" class="navIntro">04</a></li>
                         <li><a href="case-study-05.html" class="navIntro">05</a></li>
@@ -174,7 +141,7 @@
                     </ul>
                     <ul id="nav-mobile" class="sidenav">
                         <li><a href="case-study-01.html" class="home-button">01</a><li>
-                        <li><a href="case-study-02.html" class="home-button active">02</a><li>
+                        <li><a href="case-study-02.html" class="home-button">02</a><li>
                         <li><a href="case-study-03.html" class="home-button">03</a><li>
                         <li><a href="case-study-04.html" class="home-button">04</a><li>
                         <li><a href="case-study-05.html" class="home-button">05</a><li>
@@ -189,33 +156,26 @@
             <div class="container">
                 <div class="row">
                     <div class="hero-text-box case-study center-align">
-                        <h1>dealer.com</h1>
-                        <h3 class="intro-text">I've worked as a designer and developer at Dealer.com for nearly 5 years. I started here as a Digital Creative Designer, but moved to an Interactive Ads team. I've been a Web Developer on that team ever since and have been able to learn a ton of HTML, CSS, and JS, along with a lot of UI Animation fundamentals. My primary role is the design and development of JS based interactive banner ads, but I also build out quite a few landings pages for brands as well.</h3>
+                        <h1>personal identity</h1>
+                        <h3 class="intro-text">After getting more exposure to the UI/UX and Web Design world, I decided it was time to overhaul my personal identity and clean up my portfolio site. I knew I wanted to build the site from scratch, as opposed to my previous site that I built using a Bootstrap template. I also knew that I wanted to make it more minimal and type focused than my last site with some subtle UI animation. With that in mind, I incorporated Materialize and GSAP.</h3>
                     </div>
                 </div>
             </div>
         </div>
         <section id="about">
             <div class="container">
-                <div class="row grid mockup">
-                    <figure class="col s12 m6 l4 center-align">
-                        <img src="resources/img/case-02/dodge-ad.png" alt="Dodge Ad" data-alt="resources/img/case-02/dodge-ad.gif" class="responsive-img gif">
-                    </figure>
-                    <figure class="col s12 m6 l4 center-align">
-                        <img src="resources/img/case-02/hyundai-ad.png" alt="Hyundai Ad" data-alt="resources/img/case-02/hyundai-ad.gif" class="responsive-img gif">
-                    </figure>
-                    <figure class="col s12 m6 l4 center-align">
-                        <img src="resources/img/case-02/tire-ad.png" alt="Tire Ad" data-alt="resources/img/case-02/tire-ad.gif" class="responsive-img gif">
-                    </figure>
-                    <figure class="col s12 m6 l4 center-align">
-                        <img src="resources/img/case-02/jeep-ad.png" alt="Jeep Ad" data-alt="resources/img/case-02/jeep-ad.gif" class="responsive-img gif">
-                    </figure>
-                    <figure class="col s12 m6 l4 center-align">
-                        <img src="resources/img/case-02/chevy-ad.png" alt="Chevy Ad" data-alt="resources/img/case-02/chevy-ad.gif" class="responsive-img gif">
-                    </figure>
-                    <figure class="col s12 m6 l4 center-align">
-                        <img src="resources/img/case-02/fiat-ad.png" alt="Fiat Ad" data-alt="resources/img/case-02/fiat-ad.gif" class="responsive-img gif">
-                    </figure>
+                <div class="row first-image">
+                    <img class="mockup responsive-img" src="resources/img/case-01/mock.png" alt="Identity Mockup" />
+                </div>
+                <div class="row write-up">
+                    <div class="col s12 m6 l6">
+                        <img src="resources/img/case-01/image1.png" alt="Personal Site Mockup" class="responsive-img">
+                    </div>
+                    <div class="col s12 m6 l6 description">
+                        <h4>MOCKUPS & PROTOYPING</h4>
+                        <p>My original mockup and prototype were very minimalistic and muted. I wound up using a few UI specific color pallettes for the final run to draw the eye a bit more. I also gave the layout a little less white space to keep the site from feeling empty.</p>
+                    </div>
+                    
                 </div>
                 <div class="row skills">
                     <h2 class="center skillBlock">skills used:</h2>
@@ -223,21 +183,21 @@
                         <div class="icon-block skill-icons">
                             <h2 class="center icon-big"><i class="material-icons">mouse</i></h2>
                             <h3 class="center skill-title">Graphic Design</h3>
-                            <p>Layout and design come into play quite a lot with our ads and landing pages. Typography, color theory, and eye-catching visuals all come into play.</p>
+                            <p>After some sketching and ideation, I created a new logo and started laying out a cleaner typography focused design system.</p>
                         </div>
                     </div>
                     <div class="col s12 m4 skillBlock">
                         <div class="icon-block skill-icons">
                             <h2 class="center icon-big"><i class="material-icons">code</i></h2>
                             <h3 class="center skill-title">Web Design</h3>
-                            <p>All of our ads are heavily JS focused and then our landing pages are equal parts HTML, CSS, and JS. All ads are customizable and many landing pages need to be as well.</p>
+                            <p>Using Google Materialize, I started laying out a clean and solid website to showcase my portfolio.</p>
                         </div>
                     </div>
                     <div class="col s12 m4 skillBlock">
                         <div class="icon-block skill-icons">
                             <h2 class="center icon-big"><i class="material-icons">phone_iphone</i></h2>
                             <h3 class="center skill-title">UI Design</h3>
-                            <p>A lot of thought goes into the animations, button effects, and overall interaction with our ads. Some ads can even allow you to scroll through new inventory. This interactive aspect really allows for creativity, along with user engagement and interaction.</p>
+                            <p>To align with the new direction, I chose a rich UI focused color pallette and leveraged my skills with GSAP to incorporate some subtle animation throughout the site.</p>
                         </div>
                     </div>
                 </div>
