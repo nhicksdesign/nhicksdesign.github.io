@@ -223,6 +223,13 @@ nav .sidenav-close {
     cursor: pointer;
 }
 
+#closeIcon {
+    position: absolute !important;
+    z-index: 1 !important;
+
+    margin-right: 8px;
+}
+
 .mobile-nav-icon i {
     font-size: 400%;
 

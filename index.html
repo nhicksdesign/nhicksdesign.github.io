@@ -65,9 +65,12 @@
         <script>
         $(document).ready(function() {
         $('.tooltipped').tooltip();
+
         /*ANIMATION SETS*/
         /*HOME PAGE*/
         var mainLogo = $("#logo-container");
+        var isMobile = false;
+        TweenMax.set(closeIcon, {autoAlpha:0})
         if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         mainLogo.mouseover(function(){
         TweenMax.to(mainLogo, 0, {y:0})
@@ -81,13 +84,14 @@
         });
         mainLogo.mouseout(function(){
         TweenMax.to(mainLogo, 0.25, {y:0, ease:Sine.easeInOut})
+        isMobile = true;
         });
         };
+        if (isMobile = false) {
         TweenMax.set(".navIntro", {
         x: -10,
         autoAlpha: 0
         });
-        TweenMax.set(closeIcon,{autoAlpha:0})
         TweenMax.set(".hero-text-box", {
         autoAlpha: 0
         });
@@ -96,21 +100,21 @@
         autoAlpha: 0,
         opacity: 0
         });
-        TweenMax.to("#logo-container", 0.5, {
+        TweenMax.to("#logo-container", 0.25, {
         y: 0,
         autoAlpha: 1,
         ease: Sine.easeInOut,
-        delay: 0.5
+        delay: 0.25
         });
-        TweenMax.staggerTo(".navIntro", 0.5, {
+        TweenMax.staggerTo(".navIntro", 0.1, {
         x: 0,
         autoAlpha: 1,
         ease: Sine.easeInOut,
-        delay: 1
-        }, 0.25);
+        delay: 0.25
+        }, 0.1);
         TweenMax.to(".hero-text-box", 1, {
         autoAlpha: 1,
-        delay: 2
+        delay: 0.5
         });
         /*ABOUT PAGE*/
         TweenMax.set([aboutHead, aboutSub, ".skill-icons"], {
@@ -135,27 +139,27 @@
         if (direction == 'down') {
         $('nav').addClass('sticky');
         $('nav').removeClass('transparent');
-        TweenMax.to(aboutHead, 0.5, {
+        TweenMax.to(aboutHead, 0.25, {
         autoAlpha: 1,
         y: 0,
         ease: Sine.easeInOut
         });
-        TweenMax.to(aboutSub, 0.5, {
+        TweenMax.to(aboutSub, 0.25, {
         autoAlpha: 1,
         y: 0,
         ease: Sine.easeInOut,
-        delay: 0.25
+        delay: 0.15
         });
-        TweenMax.staggerTo(".skill-icons", 0.5, {
+        TweenMax.staggerTo(".skill-icons", 0.25, {
         autoAlpha: 1,
         y: 0,
         ease: Sine.easeInOut,
-        delay: 1
-        }, 0.25);
-        TweenMax.to(resumeCTA, 0.5, {
+        delay: .5
+        }, 0.15);
+        TweenMax.to(resumeCTA, 0.15, {
         opacity: 1,
         ease: Sine.easeInOut,
-        delay: 1
+        delay: .5
         });
         } else {
         $('nav').removeClass('sticky');
@@ -166,23 +170,23 @@
         });
         $("#work").waypoint(function(direction) {
         if (direction == 'down') {
-        TweenMax.to(workHead, 0.5, {
+        TweenMax.to(workHead, 0.25, {
         autoAlpha: 1,
         y: 0,
         ease: Sine.easeInOut
         });
-        TweenMax.to(workSub, 0.5, {
+        TweenMax.to(workSub, 0.25, {
         autoAlpha: 1,
         y: 0,
         ease: Sine.easeInOut,
         delay: 0.25
         });
-        TweenMax.staggerTo(".work-buttons", 0.5, {
+        TweenMax.staggerTo(".work-buttons", 0.25, {
         autoAlpha: 1,
         y: 0,
         ease: Sine.easeInOut,
-        delay: 1
-        }, 0.25);
+        delay: 0.5
+        }, 0.15);
         }
         }, {
         offset: '140px;'
@@ -210,6 +214,19 @@
         }, {
         offset: '140px;'
         });
+        } else {
+            $("#about").waypoint(function(direction) {
+            if (direction == 'down') {
+            $('nav').addClass('sticky');
+            $('nav').removeClass('transparent');
+            } else {
+            $('nav').removeClass('sticky');
+            $('nav').addClass('transparent');
+            }
+            }, {
+            offset: '140px;'
+            });
+        };
         /*SCROLL TO*/
         $('#logo-container').click(function() {
         $('html, body').animate({
@@ -237,18 +254,15 @@
         }, 1000);
         });
         /*MOBILE NAVIGATION*/
-        $('.mobile-nav-icon').click(function() {
-        var nav = $('.main-nav');
-        var icon = $('.mobile-nav-icon i');
-        nav.slideToggle(200);
-        if (icon.hasClass('ion-navicon-round')) {
-        icon.addClass('ion-close-round');
-        icon.removeClass('ion-navicon-round');
-        } else {
-        icon.addClass('ion-navicon-round');
-        icon.removeClass('ion-close-round');
-        }
+        /*var nav = $('.sidenav');
+        var icon = $('.sidenav-trigger');
+        icon.click(function() {
+            nav.slideToggle(200);
         });
+        nav.click(function() {
+            nav.slideToggle(0);
+            icon.show();
+        });*/
         var $contactForm = $('#contact-form');
         $contactForm.submit(function(e) {
         e.preventDefault();
@@ -280,10 +294,12 @@
                         <li><a href="#about" class="about-button">ABOUT</a></li>
                         <li><a href="#work" class="work-button">WORK</a></li>
                         <li><a href="#contact" class="hire-button">HIRE ME</a></li>
-                        <li><a href="#!" class="sidenav-close"><i class="material-icons" id="closeIcon">close</i></a>
                     </ul>
                     <a href="javascript:;" data-target="nav-mobile" class="sidenav-trigger">
                         <i class="material-icons" id="hamburgerIcon">menu</i>
+                    </a>
+                    <a href="javascript:;" data-target="nav-mobile" class="sidenav-close">
+                        <i class="material-icons" id="closeIcon">close</i>
                     </a>
                     <a id="logo-container" href="#home" class="brand-logo">
                         <img src="resources/img/Logo_Website%20Header.png" alt="Header Logo" class="logo">
