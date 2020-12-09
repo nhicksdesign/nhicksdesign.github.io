@@ -833,6 +833,10 @@ fieldset {
     margin-left: 0;
 }
 
+.type-pages {
+    padding: 40px !important;
+}
+
 .first-description {
     width: 60%;
     margin-top: 520px;
