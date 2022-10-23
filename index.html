@@ -57,6 +57,17 @@
         typeSpeed: 50,
         shuffle: true
         });
+        const nav = document.querySelector('#nav-mobile');
+        const navCloseElement = document.querySelector('.sidenav-close');
+
+        let navCloneElement = navCloseElement.cloneNode(true);
+        navCloneElement.style.display = 'none';
+        navCloneElement.querySelector('#closeIcon').remove();
+        nav.insertAdjacentElement('beforeEnd',navCloneElement);
+
+        navCloseElement.addEventListener('click', () => {
+        navCloneElement.click();
+        });
         });
         </script>
     </head>
@@ -217,7 +228,7 @@
 
         
 
-            $("#about").waypoint(function(direction) {
+        $("#about").waypoint(function(direction) {
             if (direction == 'down') {
             $('nav').addClass('sticky');
             $('nav').removeClass('transparent');
@@ -227,7 +238,7 @@
             }
             }, {
             offset: '140px;'
-            });
+        });
         /*SCROLL TO*/
         $('#logo-container').click(function() {
         $('html, body').animate({
